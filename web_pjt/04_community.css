@@ -1,0 +1,39 @@
+/* 04_community.css */
+/* 아래에 코드를 작성해 주세요. */
+
+.main {
+    margin: auto;
+    width: 720px;
+}
+
+.comm_title {
+    margin: 50px;
+    text-align: center;
+}
+
+.comm_title_line {
+    width: 100px;
+    border: solid 2px yellow;    
+}
+
+.comm_section {
+    margin-bottom: 50px;
+}
+
+.comm_article {
+    margin: 20px;
+    border-bottom: solid rgb(150, 150, 150) 1.5px;
+}
+
+.title_name {
+    text-align: left;
+}
+
+.user_time {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.article_time {
+    color: gray;
+}

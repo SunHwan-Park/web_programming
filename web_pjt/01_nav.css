@@ -1,0 +1,44 @@
+/* 01_nav.css */
+/* 아래에 코드를 작성해 주세요. */
+nav {
+    background-color: rgb(44, 43, 43);
+    height: 80px;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav::after {
+    content: '';
+    display: block;
+    clear: right;
+}
+
+.nav-logo {
+    float: left;
+    height: 80px;
+}
+
+.nav-items {
+    float: right;
+    height: 80px;
+    line-height: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline;
+    margin-right: 32px;
+}
+
+.nav-item > a {
+    color: gray;
+    text-decoration: none;
+}
+
+.nav-item > a:hover {
+    color: white;
+}
