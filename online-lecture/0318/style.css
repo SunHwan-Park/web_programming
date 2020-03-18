@@ -1,0 +1,41 @@
+/* 아래애 자유롭게 꾸며 주세요! */
+
+body {
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.form-input {
+    width: 400px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.form-input > input {
+    width: 396px;
+    height: 26px;
+    margin: 2px 0;
+}
+
+.form-input > h3 {
+    margin: 2px 0;
+}
+
+.form-input > p {
+    margin: 2px 0;
+    color: gray;
+}
+
+.form-submit {
+    width: 400px;
+    height: 30px;
+    color: white;
+    background-color: rgb(122, 21, 255);
+    border: 0;
+}
+
+.form-submit:hover {
+    cursor: pointer;
+    background-color: rgb(184, 87, 248);
+}
