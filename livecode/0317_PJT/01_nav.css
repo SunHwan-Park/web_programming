@@ -1,0 +1,52 @@
+/* body 높이는 스크롤 테스트를 위해서 작성 */
+body {
+  height: 10000px;
+}
+
+/* 01_nav.css */
+/* 아래에 코드를 작성해 주세요. */
+nav {
+  /* 상단 고정
+    sticky와 fixed의 차이점을 확인할 것.
+  */
+  position: sticky;
+  top: 0;
+  height: 80px;
+  padding: 0 1rem;
+  line-height: 80px;
+  background-color: brown;
+}
+
+/* vertical-align은 inline 요소에 대하여 활용 가능.
+line-height가 부여되어 있어, 그 길이를 기준으로 가운데로 맞출 수 있음.
+만약 nav에 있는 line-height를 주석 처리하면 가운데로 맞출 수 없음.
+*/
+.nav-logo {
+  width: 100px;
+  vertical-align: middle;
+}
+
+/* 우측으로 띄우고, margin 0으로 초기화 */
+.nav-items {
+  float: right;
+  margin: 0;
+}
+
+/* float 방지 */
+.nav::after {
+  content: "";
+  display: block;
+  clear: right;
+}
+
+/* li 요소들을 inline으로 변경 */
+.nav-item {
+  display: inline;
+  color: lightgray;
+}
+
+/* hover 정의 */
+.nav-item:hover {
+  cursor: pointer;
+  color: white;
+}

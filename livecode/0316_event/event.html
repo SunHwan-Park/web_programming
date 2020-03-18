@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <button>버튼</button>
+  </div>
+  <script>
+    const clickEvent = function(event) {
+      console.log('target')
+      console.log(event.target);
+      console.log('current target')
+      console.log(event.currentTarget);
+      console.log('this')
+      console.log(this);
+    }
+    const button = document.querySelector('button');
+    button.addEventListener('click', clickEvent);
+    const div = document.querySelector('div');
+    div.addEventListener('click', clickEvent);
+    const body = document.querySelector('body');
+    body.addEventListener('click', clickEvent);
+  </script>
+</body>
+</html>

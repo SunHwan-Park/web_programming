@@ -1,0 +1,32 @@
+/* 04_community.css */
+/* 아래에 코드를 작성해 주세요. */
+.main {
+  width: 720px;
+  margin: 0 auto;
+}
+
+.main-header {
+  text-align: center;
+}
+
+/*
+box-sizing: border-box가 중요한 이유를 개발자도구로 확인 해주세요.
+*/
+.main-header > hr {
+  box-sizing: border-box;
+  width: 100px;
+  border: 1px solid orange;
+}
+
+section {
+  padding: 1rem;
+  border-bottom: 1px solid gray;
+}
+
+/*
+단순 하나하나의 레이아웃을 위한 CSS가 아니라
+아래처럼 자주 쓰이는 CSS를 미리 클래스로 적용하고 여기저기에서 활용 가능합니다 :)
+*/
+.text-right {
+  text-align: right;
+}

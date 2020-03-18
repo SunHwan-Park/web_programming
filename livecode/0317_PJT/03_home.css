@@ -1,0 +1,89 @@
+/* 03_home.css */
+/* 아래에 코드를 작성해 주세요. */
+
+/* flex를 간단하게 써보았습니다.
+자세한 내용은 다음주 진행되는 강의에서 설명드리게 될 것 같습니다.
+
+header에 flex를 정의하면
+자동으로 .header-title과 .btn은 flex 아이템으로 관리됩니다. (속성이 아니라 개념적인 측면입니다.)
+더이상 block, inline에 대한 속성보다는 flex container(header)에 정의된대로 배치됩니다.
+
+아래의 개념이 필요합니다.
+- 기본은 메인축이 가로(row)이며, flex-direction을 통해 정의합니다.
+- 메인축(main axis), 이에 반대되는 축(cross axis)
+- 메인축 정렬 : justify-content,
+- 반대되는 축 정렬 : align-items
+*/
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-color: gray;
+}
+
+.header-title {
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* 경계선 초기화 이후
+border-radius 조정
+linear-gradient의 경우 https://cssgradient.io/ 여기서 직접 만들어 볼 수도 있습니다 :)
+*/
+.btn {
+  border: none;
+  border-radius: 5px;
+  padding: .5rem 1.5rem;
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+/* css로 간단한 필터를 넣을 수 있습니다.
+어둡게 만들어보겠습니다.
+transition을 통해 filter 속성이 적용되는데까지 1초가 걸리게끔 조정 가능합니다.
+*/
+.btn:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
+  transition: filter 1s ease-in-out;
+}
+
+/* section */
+section {
+  text-align: center;
+}
+
+.skill > img {
+  width: 100px;
+}
+/*
+  다양한 방식으로 배치를 할 수 있지만, table과 table-cell로 배치 해보았습니다.
+*/
+/* 1. skill */
+.skills {
+  display: table;
+  margin: 0 auto;
+}
+
+.skill {
+  display: table-cell;
+  padding: 1rem;
+}
+
+
+/* 2. inline-block도 가능합니다. */
+/* .skill {
+  display: inline-block;
+  padding: 1rem;
+} */
+
+/* 3. flex로도 구성 가능합니다. */
+/* .skills {
+  display: flex;
+  justify-content: center;
+}
+
+.skill {
+  padding: 1rem;
+} */
