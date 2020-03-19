@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입 폼</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>회원 가입</h1>
+  <form action="">
+    <!-- 아래에 자유롭게 꾸며주세요! 어떠한 제약사항도 없습니다 :) -->
+    <div class="form-control">
+      <!-- for를 통해서 input의 id값과 동일하게 정의하면 해당 input의 라벨로 지정되어 사용자 편의성이 증대됩니다.
+        아래에서 확인 해주세요.
+      https://developer.mozilla.org/ko/docs/Web/HTML/Element/label
+        아래처럼 코드를 작성해도 됩니다.
+      <label for="username">
+        사용자 이름
+        <input type="text" id="username" required autofocus autocomplete="username">
+      </label>
+      -->
+      <label for="username">사용자 이름</label>
+      <!-- required, autofucs, autocomplete와 같은 속성은
+        그리고 라이브 강의에서도 질문 해주셨는데, 실제로 나중에는 서버에서도 예외처리를 해야 합니다.
+        HTML/CSS, JS로 구성된 파일들은 브라우저에서 직접 조작이 가능하기 때문에 그렇습니다.
+      -->
+      <input type="text" id="username" required autofocus autocomplete="username">
+      <span class="help-text">사용자 이름을 입력해주세요.</span>
+    </div>
+    <div class="form-control">
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" required>
+      <span class="help-text">비밀번호를 입력해주세요.</span>
+    </div>
+    <div class="form-control">
+      <label for="password_confirmation">비밀번호 확인</label>
+      <input type="password" id="password_confirmation" required>
+      <span class="help-text">비밀번호를 동일하게 입력해주세요.</span>
+    </div>
+    <button>회원가입</button>
+  </form>
+</body>
+</html>
