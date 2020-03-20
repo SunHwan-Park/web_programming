@@ -20,25 +20,25 @@
         <input type="text" id="username" required autofocus autocomplete="username">
       </label>
       -->
-      <label for="username">사용자 이름</label>
+      <label class="required" for="username">사용자 이름</label>
       <!-- required, autofucs, autocomplete와 같은 속성은
         그리고 라이브 강의에서도 질문 해주셨는데, 실제로 나중에는 서버에서도 예외처리를 해야 합니다.
         HTML/CSS, JS로 구성된 파일들은 브라우저에서 직접 조작이 가능하기 때문에 그렇습니다.
       -->
-      <input type="text" id="username" required autofocus autocomplete="username">
+      <input type="text" id="username" placeholder="아이디 입력" required autofocus autocomplete="username">
       <span class="help-text">사용자 이름을 입력해주세요.</span>
     </div>
     <div class="form-control">
-      <label for="password">비밀번호</label>
-      <input type="password" id="password" required>
+      <label class="required"  for="password">비밀번호</label>
+      <input type="password" id="password" required autocomplete="new-password">
       <span class="help-text">비밀번호를 입력해주세요.</span>
     </div>
     <div class="form-control">
       <label for="password_confirmation">비밀번호 확인</label>
-      <input type="password" id="password_confirmation" required>
+      <input type="password" id="password_confirmation" required autocomplete="new-password">
       <span class="help-text">비밀번호를 동일하게 입력해주세요.</span>
     </div>
-    <button>회원가입</button>
+    <button class="btn">회원가입</button>
   </form>
 </body>
 </html>
