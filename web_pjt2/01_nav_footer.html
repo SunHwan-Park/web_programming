@@ -12,8 +12,57 @@
 </head>
 <body>
   <!-- 01_nav_footer.html -->
-  <nav></nav>
-  <footer></footer>
+  <!-- nav -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top py-0">
+    <a href="02_home.html"><img class="nav_logo" src="images/logo.png" alt="cinema_logo"></a>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a class="text-white nav-link" href="02_home.html"><strong>Home</strong></a></li>
+        <li class="nav-item"><a class="text-white-70 nav-link" href="03_community.html">Community</a></li>
+        <li class="nav-item"><a class="text-white-70 nav-link" href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- login modal -->
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="form-group">
+              <label class="font-weight-bold" for="username">Username</label>
+              <input class="w-100 form-control" type="text" id="username" name="username">
+            </div>
+            <div class="form-group">
+              <label class="font-weight-bold" for="password">Password</label>
+              <input class="w-100 form-control" type="password" id="password" name="password">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="checkmeout">
+              <label class="form-check-label" for="checkmeout">Check me out</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="fixed-bottom d-flex justify-content-center align-items-center bg-dark">
+    <p class="text-white mb-0">Web-bootstrap PJT, by SunHwan Park</p>
+  </footer>
 
   <!-- Jquery & Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

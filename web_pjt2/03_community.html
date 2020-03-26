@@ -15,31 +15,164 @@
 
   <!-- 01_nav_footer.html -->
   <!-- 01_nav_footer 에서 완성한 Navigation bar 코드를 붙여넣어 주세요. -->
-
-  <!-- 03_community.html -->
-  <div class="main">
-    <h1>Community</h1>
-    <!-- Sidebar -->
-    <aside>
-      <ul></ul>
-    </aside>
-
-    <!-- Board -->
-    <section>
-      <div>
-        <table></table>
+  <!-- nav -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top py-0">
+    <a href="02_home.html"><img class="nav_logo" src="images/logo.png" alt="cinema_logo"></a>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="text-white-70 nav-link" href="02_home.html">Home</a></li>
+        <li class="nav-item active"><a class="text-white-70 nav-link" href="03_community.html"><strong>Community</strong></a></li>
+        <li class="nav-item"><a class="text-white-70 nav-link" href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- login modal -->
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="form-group">
+              <label class="font-weight-bold" for="username">Username</label>
+              <input class="w-100 form-control" type="text" id="username" name="username">
+            </div>
+            <div class="form-group">
+              <label class="font-weight-bold" for="password">Password</label>
+              <input class="w-100 form-control" type="password" id="password" name="password">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="checkmeout">
+              <label class="form-check-label" for="checkmeout">Check me out</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+        </div>
       </div>
-
-
-      <div>
-        <article></article>
-      </div>
-    </section>
+    </div>
   </div>
 
+  <!-- 03_community.html -->
+  <div class="main container">
+    <h1 class="text-center my-5">Community</h1>
+    <div class="row justify-content-center">
+      <!-- Sidebar -->
+      <aside class="col-12 col-lg-2 mb-3">
+        <ul class="list-unstyled">
+          <li class="border rounded-top p-2"><a class="text-decoration-none" href="#">Boxoffice</a></li>
+          <li class="border p-2"><a class="text-decoration-none"  href="#">Movies</a></li>
+          <li class="border p-2"><a class="text-decoration-none"  href="#">Genres</a></li>
+          <li class="border rounded-bottom p-2"><a class="text-decoration-none"  href="#">Actors</a></li>
+        </ul>
+      </aside>
+      <!-- Board -->
+      <section class="col-12 col-lg-10">
+        <div class="board-lg">
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">영화 제목</th>
+                <th scope="col">글 제목</th>
+                <th scope="col">작성자</th>
+                <th scope="col">작성 시간</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Great Movie Title</th>
+                <td>Movie Test</td>
+                <td>user</td>
+                <td>1 minutes ago</td>
+              </tr>
+              <tr>
+                <th scope="row">Great Movie Title</th>
+                <td>Movie Test</td>
+                <td>user</td>
+                <td>1 minutes ago</td>
+              </tr>
+              <tr>
+                <th scope="row">Great Movie Title</th>
+                <td>Movie Test</td>
+                <td>user</td>
+                <td>1 minutes ago</td>
+              </tr>
+              <tr>
+                <th scope="row">Great Movie Title</th>
+                <td>Movie Test</td>
+                <td>user</td>
+                <td>1 minutes ago</td>
+              </tr>
+              <tr>
+                <th scope="row">Great Movie Title</th>
+                <td>Movie Test</td>
+                <td>user</td>
+                <td>1 minutes ago</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="board-normal">
+          <article class="d-flex flex-column">
+            <div class="d-flex justify-content-between border-top px-3 py-2">
+              <div>
+                <h5 class="my-2">Movie Test</h5>
+                <p class="my-2">Great Movie Title</p>
+                <p class="my-2">1 minutes ago</p>
+              </div>
+              <div>
+                <p class="my-2">user</p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between border-top px-3 py-2">
+              <div>
+                <h5 class="my-2">Movie Test</h5>
+                <p class="my-2">Great Movie Title</p>
+                <p class="my-2">1 minutes ago</p>
+              </div>
+              <div>
+                <p class="my-2">user</p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between border-top px-3 py-2">
+              <div>
+                <h5 class="my-2">Movie Test</h5>
+                <p class="my-2">Great Movie Title</p>
+                <p class="my-2">1 minutes ago</p>
+              </div>
+              <div>
+                <p class="my-2">user</p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <nav class="d-flex justify-content-center my-3" aria-label="Page navigation">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+  </div>
   <!-- 01_nav_footer.html -->
   <!-- 01_nav_footer 에서 완성한 Footer 코드를 붙여넣어 주세요. -->
-
+  <footer class="fixed-bottom d-flex justify-content-center align-items-center bg-dark">
+    <p class="text-white mb-0">Web-bootstrap PJT, by SunHwan Park</p>
+  </footer>
   <!-- Jquery & Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
