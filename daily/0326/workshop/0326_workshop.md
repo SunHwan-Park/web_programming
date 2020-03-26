@@ -1,6 +1,6 @@
 # 0326_workshop
 
-![lotto numbers](C:\Users\PARK SUNHWAN\online-lecture\0326\workshop\images\lotto numbers.png)
+<img src="images/lotto numbers.png" alt="lotto numbers"/>
 
 1. intro/urls.py
 

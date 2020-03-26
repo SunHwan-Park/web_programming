@@ -18,4 +18,4 @@
 > ~/최상위 프로젝트폴더 $ python manage.py runserver 8080
 > ```
 
-![main_page](C:\Users\PARK SUNHWAN\online-lecture\0326\exercise\images\main_page.png)
+<img src="images/main_page.png" alt="main_page"/>
