@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>exercise</title>
+</head>
+<body>
+  <h1>Dog Image(s)</h1>
+  <hr>
+
+  <h2>강아지</h2>
+  <div class="dogs"></div>
+  <button id="dog">강아지</button>
+
+  <h2>고양이</h2>
+  <div class="cats"></div>
+  <button id="cat">고양이</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // 여기에 코드를 작성하시오. -> Javascript -> Browser (요청) XMLHttpRequest
+    // axios: XHR 활용한 HTTP request library
+    // XHR: 비동기 함수
+    
+    // const res = axios.get(url)
+    // console.log(res) // Promise 객체 (pending - 다 풀리지 않은)
+    // console.log(res.data) // undefined. 이 코드가 실행된 시점에서는 res는 비어있다.
+
+    // axios.get(url) // 비동기 함수 => 주의(요청된 값이 오지 않아도 일단 다음 코드로 넘기기)
+    // 나는 이 함수, 이 행위는 반드시 axios 응답이 완료된 이후에 실행하고 싶다.
+    // 예전에는 함수 안의 콜백 함수를 불러오며 구현
+    // 최근에 공식적으로 받아들여진 Promise
+    
+
+    // 0. 버튼을 눌렀을 때, addEventListener
+    // 1. axios를 사용하여 dog.ceo 서버에 데이터를 요청한다.
+    // 2. 받은 데이터를 가지고 createElement (DOM Node (img))
+    // 3. setAttribute(src, image_url)
+
+    const addDogImage = function() {
+      const dogURL = 'https://dog.ceo/api/breeds/image/random'
+      axios.get(dogURL).then(
+        response => { // axios.get(url) 요청에 대한 응답이 하나의 객체
+          const imgURL = response.data.message
+          const dogImage = document.createElement('img')
+          dogImage.src = imgURL
+          dogImage.style.height = '300px'
+          document.querySelector('.dogs').appendChild(dogImage)
+        } 
+      )
+    }
+
+    const addCatImage = function() {
+      const catURL = 'https://api.thecatapi.com/v1/images/search'
+      axios.get(catURL).then(
+        response => { // axios.get(url) 요청에 대한 응답이 하나의 객체
+          const imgURL = response.data[0].url
+          const catImage = document.createElement('img')
+          catImage.src = imgURL
+          catImage.style.height = '300px'
+          document.querySelector('.cats').appendChild(catImage)
+        } 
+      )
+    }
+
+    // arrow function 쓰지 않는 경우
+    // 1. 생성자 함수
+    // 2. 이벤트 리스너 인자 함수
+
+    // const dogButton = document.querySelector('#dog')
+    // dogButton.addEventListener('click', function(event) {
+    //   console.log(this) // dogButton 요즘엔 이벤트 리스너 안에서 this 잘 안씀
+    //   console.log(event.target) // dogButton 요거 많이 씀
+    // })
+
+    const dogButton = document.querySelector('#dog')
+    dogButton.addEventListener('click', addDogImage)
+    
+    const catButton = document.querySelector('#cat')
+    catButton.addEventListener('click', addCatImage)
+  </script>
+</body>
+</html>
